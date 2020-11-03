@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		body{ background-image: url(bg.jpg); 
+			background-size: 100% 100%;
+		}
+		* { margin: 0; padding: 0; box-sizing: border-box;		}
+		.centercalc{ 
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		form{
+			width: 400px; height: 520px;
+			box-shadow: 0 0 10px 1px gray;
+		}
+		#app_name{
+			width: inherit;
+			font-size: 0.8rem;
+			padding: 2px 0 2px 10px;
+			background-color: #303030;
+			color: white;
+			border: none;
+			outline: none;
+			font-family: 'Open Sans', Sans-Serif;
+		}
+		#disp_ans{
+			width: inherit;
+			height: 100px;
+			font-size: 2rem;
+			background-color: #303030;
+			text-align: right;
+			color: white;
+			outline: none;
+			border: none;
+		}
+		.layer0{
+			width: inherit;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+		}
+		.layer1{
+			width: inherit;
+			height: 90px;
+			color: white;
+			display: flex;
+			justify-content: center;
+		}
+		input{flex: 1;
+			font-size: 1.4rem;
+			color: white;
+			border: 1px solid #504f4f;
+			outline: none;
+		}
+		input:hover{
+			background-color: #474747;
+			border: 1px solid grey;
+		}
+		.main_num{
+			background-color: #101011;
+			color: white;
+		}
+		.operator{
+			background-color: #303030;
+		}
+		#clear{ font-size: 1rem; }
+
+	</style>
+</head>
+<body>
+	
+	<div class="centercalc">
+			<form name="calc">
+				<input type="text" name=""  value="Calculator" id="app_name">
+				<input type="text" name="display" id="disp_ans">
+				<div class="layer0">
+					<input type="button" name="" class="operator" value="C" id="clear" onclick="calc.display.value = ' ' ">
+					<input type="button" name="" class="operator" value="=" id="" onclick="calc.display.value = eval(calc.display.value)">
+					
+				</div>
+				<div class="layer1">
+					<input type="button" class="main_num" value="7" onclick="calc.display.value += '7' ">
+					<input type="button" class="main_num" value="8" onclick="calc.display.value += '8' ">
+					<input type="button" class="main_num" value="9" onclick="calc.display.value += '9' ">
+					<input type="button" class="operator" value="*" onclick="calc.display.value += '*' ">
+				</div>
+				<div class="layer1">
+					<input type="button" class="main_num" value="4" onclick="calc.display.value += '4' ">
+					<input type="button" class="main_num" value="5" onclick="calc.display.value += '5' ">
+					<input type="button" class="main_num" value="6" onclick="calc.display.value += '6' ">
+					<input type="button" class="operator" value="-" onclick="calc.display.value += '-' ">
+				</div>
+				<div class="layer1">
+					<input type="button" class="main_num" value="1" onclick="calc.display.value += '1' ">
+					<input type="button" class="main_num" value="2" onclick="calc.display.value += '2' ">
+					<input type="button" class="main_num" value="3" onclick="calc.display.value += '3' ">
+					<input type="button" class="operator" value="+" onclick="calc.display.value += '+' ">
+				</div>
+				<div class="layer1">
+					<input type="button" class="operator" value="." onclick="calc.display.value += '.' ">
+					<input type="button" class="main_num" value="0" onclick="calc.display.value += '0' ">
+					<input type="button" class="operator" value="%" onclick="calc.display.value += '%' ">
+					<input type="button" class="operator" value="/" onclick="calc.display.value += '/' ">
+				</div>
+			</form>
+	</div>
+	
+</body>
+
+</html>
